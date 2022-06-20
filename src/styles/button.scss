@@ -1,0 +1,41 @@
+.button {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.5px;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  flex-shrink: 0;
+  width: 148px;
+  height: 56px;
+  overflow: hidden;
+  padding: 0 20px;
+  position: relative;
+  text-decoration: none;
+  background: $color-primary-300;
+  color: $color-mono-b-500;
+  text-transform: uppercase;
+  
+  &:hover {
+    background: $color-primary-500;
+  }
+  &:focus {
+    background-color: $color-primary-a50;
+    outline: none;
+  }
+
+  &:after {
+    background-color: transparent;
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 200ms;
+  }
+}
