@@ -1,0 +1,159 @@
+@import-normalize;
+@import './variables.scss';
+@import './button.scss';
+@import './input.scss';
+
+//----//
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.h1 {
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 0.2px;
+  line-height: 36px;
+}
+
+.body-200 {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  line-height: 24px;
+}
+
+//-----//
+
+.send {
+  max-width: 1344px;
+  height: 100%;
+  margin: 0 auto;
+  display: none;
+  display: block;
+
+  &__content {
+    flex-direction: column;
+    text-align: center;
+    display: flex;
+
+    margin: 0 auto;
+    padding: 56px 16px;
+    max-width: 585px;
+  }
+
+  &__background {
+    background: $color-common-background-2;
+    border-radius: 6px;
+  }
+
+  &__heading {
+    margin: 0;
+    margin-bottom: 18px;
+    text-align: center;
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+
+    @media (min-width: 768px) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__input {
+    margin-bottom: 16px;
+    min-height: 56px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 0;
+      margin-right: 16px;
+    }
+  }
+
+  &__label {
+    left: 34px;
+  }
+
+  &__wrap-border {
+    border-radius: 4px;
+    border: 2px solid $color-primary-300;
+    padding: 15px;
+  }
+
+  &__wrapper {
+    min-height: 300px;
+    width: 100%;
+    flex-direction: column;
+    overflow: visible;
+    text-align: left;
+    flex-wrap: nowrap;
+
+    @media (min-width: 768px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    margin-top: 15px;
+    text-align: left;
+  }
+
+  &__item {
+    font-size: 14px;
+    font-weight: 600;
+    color: $color-mono-a500;
+    overflow-wrap: break-word;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+
+    & > img {
+      width: 100%;
+      max-height: 450px;
+    }
+  }
+
+  &__link {
+    padding: 5px;
+    display: grid;
+    cursor: pointer;
+    color: $color-mono-a-a500;
+  }
+
+  &__error {
+    margin-top: 15px;
+  }
+}
